@@ -10,7 +10,7 @@
 </template>
 
 <script>
-
+// Menu for mobile display 
 export default {
   data () {
     return {

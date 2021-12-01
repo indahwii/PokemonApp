@@ -59,6 +59,7 @@ export default {
     }
   },
   computed: {
+    // function for show list favorite
     ...mapState('favorite', {
       favorite: state => state.product
     })
@@ -66,11 +67,13 @@ export default {
   mounted () {
   },
   methods: {
+    // function for show detail , with vuex 
     getDetail (key) {
       this.loading = true
       this.$router.push('/detail?params=' + key)
       this.$store.dispatch('detail/getDetail', key)
     },
+    // function add favorite with vuex 
     addFav (id, name, url) {
       this.selected = {
         id,

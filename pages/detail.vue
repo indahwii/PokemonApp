@@ -58,6 +58,7 @@ export default {
     }
   },
   computed: {
+     // function for show detail pokemon
     ...mapState('detail', {
       details: state => state.detailProduct
     })

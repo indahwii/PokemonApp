@@ -72,6 +72,7 @@ export default {
     this.getList()
   },
   methods: {
+     // function for show list pokemon
     getList () {
       this.$axios.get('/pokemon')
         .then((res) => {
@@ -84,6 +85,7 @@ export default {
           })
         })
     },
+     // function nested pokemon image 
     getPokemonData (data) {
       const url = data.substr(34, 3)
 
@@ -93,11 +95,13 @@ export default {
           this.pokedata = datas
         })
     },
+     // function for get detail the pokemon 
     getDetail (key) {
       this.loading = true
       this.$router.push('/detail?params=' + key)
       this.$store.dispatch('detail/getDetail', key)
     },
+     // function for add to favorite 
     addFav (id, name, url) {
       this.selected = {
         id,
